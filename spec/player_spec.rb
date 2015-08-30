@@ -14,5 +14,21 @@ module TicTacToe
 			end
 
 		end
+
+		context "#piece" do
+			it "returns the piece" do
+				input = { piece: "X", name: "Someone" }
+				player = Player.new(input)
+				expect(player.piece).to eq "X"
+			end
+		end
+
+		context "#name" do
+			it "returns the player's name" do
+				input = { piece: "X", name: "Someone" }
+				player = Player.new(input)
+				expect(player.name).to eq "Someone"
+			end
+		end
 	end
 end
