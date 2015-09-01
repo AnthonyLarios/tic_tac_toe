@@ -19,7 +19,14 @@ module TicTacToe
           expect(row).to have(3).things
         end
       end
-      
+
+    end
+
+    context "#grid" do
+      it "returns the grid" do
+        board = Board.new(grid: "blah")
+        expect(board.grid).to eq "blah"
+      end
     end
   end
 end
