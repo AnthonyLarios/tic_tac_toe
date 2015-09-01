@@ -2,6 +2,7 @@ require "spec_helper"
 
 module TicTacToe
   describe Board do
+
     context "#initialize" do
 
       it "initializes the board with a grid" do
@@ -28,5 +29,14 @@ module TicTacToe
         expect(board.grid).to eq "blah"
       end
     end
+
+    context "#get_cell" do
+      it "returns the cell based on the (x, y) coordinate" do
+        grid = [["", "", ""], ["", "", "something"], ["", "", ""]]
+        board = Board.new(grid: grid)
+        expect(board.get_cell(2, 1)).to eq "something"
+      end
+    end
+    
   end
 end
