@@ -46,4 +46,16 @@ describe Array do
 
   end
 
+  context "#none_empty?" do
+
+    it "returns true if all the elements of the Array are not empty" do
+      expect([1, Object.new, :a].none_empty?).to be true
+    end
+
+    it "returns false if any elements of the Array is empty" do
+      expect([1, Object.new, :a, ""].none_empty?).to be false
+    end
+
+  end
+
 end
