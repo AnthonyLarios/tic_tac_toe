@@ -113,6 +113,16 @@ module TicTacToe
         ]
         board = Board.new(grid: grid)
         expect(board.game_over).to eq :draw
+      end
+
+      it "returns false when there is no winner or draw" do
+        grid = [
+          [x_cell, empty, empty],
+          [y_cell, empty, empty],
+          [y_cell, empty, empty]
+        ]
+        board = Board.new(grid: grid)
+        expect(board.game_over).to be false
       end 
 
     end
