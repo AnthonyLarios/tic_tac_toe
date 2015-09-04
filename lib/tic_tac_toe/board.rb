@@ -14,7 +14,7 @@ module TicTacToe
     end
 
     def game_over
-      return :winner if winner?
+      #return :winner if winner?
       return :draw if draw?
       false
     end

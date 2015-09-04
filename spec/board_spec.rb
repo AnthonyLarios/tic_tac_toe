@@ -75,6 +75,16 @@ module TicTacToe
         expect(board.game_over).to be false
       end
 
+      it "returns :draw when all spaces on the board are taken" do
+        grid = [
+          [x_cell, y_cell, x_cell],
+          [y_cell, x_cell, y_cell],
+          [y_cell, x_cell, y_cell]
+        ]
+        board = Board.new(grid: grid)
+        expect(board.game_over).to eq :draw
+      end
+
     end
     
   end
