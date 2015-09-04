@@ -14,9 +14,21 @@ module TicTacToe
     end
 
     def game_over
-      #return :winner if winner?
+      return :winner if winner?
       return :draw if draw?
       false
+    end
+
+    def winner?
+      winning_positions.each do |winning_position|
+        next if winning_position_values(winning_position).all_empty?
+        return true if winning_position_values(winning_position).all_same?
+      end
+      false
+    end
+
+    def winning_position_values(winning_position)
+      winning_position.map { |cell| cell.value }
     end
 
     def draw?
