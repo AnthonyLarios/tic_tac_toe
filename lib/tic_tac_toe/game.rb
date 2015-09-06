@@ -12,7 +12,7 @@ module TicTacToe
     end
     
     def solicit_move
-      "#{current_player.name}: Enter a number between 1 and 9 to make you move"
+      "#{current_player.name}: Enter a number between 1 and 9 to make your move"
     end
 
   end
