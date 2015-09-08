@@ -31,7 +31,7 @@ module TicTacToe
         puts ""
         puts solicit_move
         x, y = get_move
-        board.set_cell(x, y, current_player.color)
+        board.set_cell(x, y, current_player.piece)
         if board.game_over
           puts game_over_message
           board.formatted_grid
