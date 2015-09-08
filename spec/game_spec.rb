@@ -63,5 +63,23 @@ module TicTacToe
 
     end
 
+    context "#game_over_message" do
+
+      it "returns '{current player name} won!' if board shows a winner" do
+        game = Game.new([bob, frank])
+        game.stub(:current_player) { bob }
+        game.board.stub(:game_over) { :winner }
+        expect(game.game_over_message).to eq "bob won!"
+      end
+
+      it "retuns 'The game ended in a tie' if board shows a draw" do
+        game = Game.new([bob, frank])
+        game.stub(:current_player) { bob }
+        game.board.stub(:game_over) { :draw }
+        expect(game.game_over_message).to eq "The game ended in a tie"
+      end
+
+    end
+
   end    
 end
