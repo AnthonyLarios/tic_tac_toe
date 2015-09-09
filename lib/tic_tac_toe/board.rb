@@ -13,6 +13,15 @@ module TicTacToe
       get_cell(x, y).value = value
     end
 
+    def check_cell(x, y)
+      if get_cell(x, y).value.empty?
+        return true
+      else
+        puts "Please choose an unoccupied space"
+      end
+      false
+    end
+
     def game_over
       return :winner if winner?
       return :draw if draw?
