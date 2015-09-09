@@ -48,6 +48,22 @@ module TicTacToe
       end
     end
 
+    context "check_cell" do
+
+      it "returns true if the cell entered by the player is empty" do
+        board = Board.new
+        expect(board.check_cell(0, 0)).to be true
+      end
+
+      it "returns false if the cell entered by the player is occupied" do
+        Cat = Struct.new(:value)
+        grid = [[Cat.new("X"), "", ""], ["", "", ""], ["", "", ""]]
+        board = Board.new(grid: grid)
+        expect(board.check_cell(0, 0)).to be false
+      end
+
+    end
+
     TestCell = Struct.new(:value)
     let(:x_cell) { TestCell.new("X") }
     let(:y_cell) { TestCell.new("Y") }
