@@ -29,9 +29,13 @@ module TicTacToe
       while true
         board.formatted_grid
         puts ""
-        puts solicit_move
-        x, y = get_move
-        board.set_cell(x, y, current_player.piece)
+        loop do
+          puts solicit_move
+          @x, @y = get_move
+          break if board.check_cell(@x, @y)
+          board.formatted_grid
+        end
+        board.set_cell(@x, @y, current_player.piece)
         if board.game_over
           puts game_over_message
           board.formatted_grid
