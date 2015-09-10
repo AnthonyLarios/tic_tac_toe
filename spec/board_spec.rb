@@ -64,6 +64,20 @@ module TicTacToe
 
     end
 
+    context "check_output" do
+
+      it "returns true if the player input is a number from 1 to 9" do
+        board = Board.new
+        expect(board.check_output(0)).to be true
+      end
+
+      it "returns false if the player input is not a number from 1 to 9" do
+        board = Board.new
+        expect(board.check_output(nil)).to be false
+      end
+
+    end
+
     TestCell = Struct.new(:value)
     let(:x_cell) { TestCell.new("X") }
     let(:y_cell) { TestCell.new("Y") }
