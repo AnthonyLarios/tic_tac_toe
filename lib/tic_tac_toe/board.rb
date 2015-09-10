@@ -22,6 +22,15 @@ module TicTacToe
       false
     end
 
+    def check_output(output)
+      if output
+        return true
+      else
+        puts "Please choose a number from 1 to 9"
+      end
+      false
+    end
+
     def game_over
       return :winner if winner?
       return :draw if draw?
