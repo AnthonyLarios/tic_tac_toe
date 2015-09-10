@@ -32,7 +32,7 @@ module TicTacToe
         loop do
           puts solicit_move
           @x, @y = get_move
-          break if board.check_cell(@x, @y)
+          break if board.check_output(@x) && board.check_cell(@x, @y)
           board.formatted_grid
         end
         board.set_cell(@x, @y, current_player.piece)
