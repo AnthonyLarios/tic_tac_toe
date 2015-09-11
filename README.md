@@ -1,39 +1,12 @@
 # TicTacToe
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/tic_tac_toe`. To experiment with that code, run `bin/console` for an interactive prompt.
+This repository is an exercise on object oriented programming. The tic_tac_toe project allows two players to play against each other using the command terminal. To run the example game, enter this from the base of the project:
 
-TODO: Delete this and the text above, and describe your gem
+  '''language-bash
+    > ruby example/example.rb
+  '''
 
-## Installation
+## Credit
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'tic_tac_toe'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install tic_tac_toe
-
-## Usage
-
-TODO: Write usage instructions here
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release` to create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-## Contributing
-
-1. Fork it ( https://github.com/[my-github-username]/tic_tac_toe/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+I followed the steps found on this [codequiz blog](https://codequizzes.wordpress.com/2013/10/25/creating-a-tic-tac-toe-game-with-ruby/).
+I included some methods to prevent the program from breaking when an invalid input is entered and a already occupied number is entered.
