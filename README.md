@@ -2,9 +2,9 @@
 
 This repository is an exercise on object oriented programming. The tic_tac_toe project allows two players to play against each other using the command terminal. To run the example game, enter this from the base of the project:
 
-  '''language-bash
-    > ruby example/example.rb
-  '''
+    ```language-bash
+        > ruby example/example.rb
+    ```
 
 ## Credit
 
